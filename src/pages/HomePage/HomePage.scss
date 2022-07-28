@@ -1,0 +1,22 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  
+  .video-container{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+  }
+  
+  .hero-container{
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    top: -25%;
+    left: -40%;
+    overflow: hidden;
+    z-index: -100;
+  }
