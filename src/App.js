@@ -1,16 +1,15 @@
-import React from "react";
 import "./App.scss";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
 // import axios from "axios";
 
 function App() {
   return (
-    <>
-    <div>
-    <h1>Hello world!</h1>
-    <p>Hello everyone</p>
-    </div>
-    </>
+   <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+    </Switch>
+   </BrowserRouter>
   );
 }
 
