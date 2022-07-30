@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
 import "./HomePage.scss";
 
 class HomePage extends React.Component {
@@ -28,7 +29,9 @@ class HomePage extends React.Component {
                 <h2 className="subtitle">A Study Space</h2>
             </div>
             <div className="wrap">
+                <Link to="/music">  
                 <button class="welcome-button">Welcome</button>
+                </Link>
                 <div class="note-position-1 note-amination">&#9835;</div>
                  <div class="note-position-2 note-amination animation-delay-2">
                 &#9833;
