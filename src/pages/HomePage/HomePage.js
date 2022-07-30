@@ -23,7 +23,8 @@ class HomePage extends React.Component {
                 </div>
             </div>
              <div className="title-container">
-                <h1 className="title">Lo-fi Vibes</h1>
+                <h1 className="title">Lo-fi</h1>
+                <h1 className="title">Vibes</h1>
                 <h2 className="subtitle">Study Space</h2>
             </div>
             <div className="bubblecontainer">
