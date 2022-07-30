@@ -28,12 +28,16 @@ class HomePage extends React.Component {
                 <h2 className="subtitle">A Study Space</h2>
             </div>
             <div className="bubblecontainer">
-                <div className="bubble"></div>
-                <div className="bubble"></div>
-                <div className="bubble"></div>
+                <div className="bubble1"></div>
+                <div className="bubble2"></div>
+                <div className="bubble3"></div>
             </div>
             <div className="wrap">
                 <button class="welcome-button">Welcome</button>
+                <div class="note-position-1 note-amination">&#9835;</div>
+                 <div class="note-position-2 note-amination animation-delay-2">
+                &#9833;
+                </div>
             </div>
 
               
