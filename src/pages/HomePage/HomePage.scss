@@ -28,7 +28,7 @@ html,body{
     left:0;
     right:0;
     background-color:black;
-    opacity:0.3;
+    opacity:0.2;
     z-index:1001;
   }
 
@@ -271,12 +271,12 @@ h1.title{
     font-size:3rem;
   }
   
-  // .note-position-3 {
-  //   top: 240px;
-  //   left:150px;
-  //   color: white;
-  //   font-size:3rem;
-  // }
+  .note-position-3 {
+    top: 240px;
+    left:1350px;
+    color: white;
+    font-size:3rem;
+  }
   
   .note-amination {
     position: absolute;

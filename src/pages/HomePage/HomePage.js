@@ -12,7 +12,7 @@ class HomePage extends React.Component {
                 <div className="video-container">
                     <ReactPlayer 
                         className="react-player"
-                        url="www.youtube.com/embed/_ITiwPMUzho"
+                        url="www.youtube.com/embed/_4kLioMoMrk?controls=0&amp;start=20"
                         width="100%"
                         height="100%"
                         position="relative"
@@ -24,13 +24,8 @@ class HomePage extends React.Component {
             </div>
              <div className="title-container">
                 <h1 className="title">Lo-fi</h1>
-                <h1 className="title">Vibes</h1>
+                <h1 className="title">Radio</h1>
                 <h2 className="subtitle">A Study Space</h2>
-            </div>
-            <div className="bubble-container">
-                <div className="bubble1"></div>
-                <div className="bubble2"></div>
-                <div className="bubble3"></div>
             </div>
             <div className="wrap">
                 <button class="welcome-button">Welcome</button>
