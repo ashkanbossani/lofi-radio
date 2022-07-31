@@ -3,11 +3,15 @@ import "./RadioPage.scss";
 import play from "../../assets/images/playBtn.png";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import RadioStations from "../../components/RadioStations/RadioStations";
+import ReactPlayer from "react-player";
+import AudioControls from "../../components/AudioControls/AudioControls";
+import pause from "../../assets/images/pause.png";
 
 const RadioPage = () => {
   const [Btn, setBtn] = useState("play-pause");
   const [Btn2, setBtn2] = useState("playBtn");
-  const [playPauseimg, setPlayPauseimg] = useState(play);
+  const [playPauseImg, setPlayPauseimg] = useState(play);
 
   const [live, setLive] = useState(false);
   const [pause, setPause] = useState("pause-screen");
@@ -53,30 +57,33 @@ const RadioPage = () => {
     setStationName("ExpressWay");
     setLiveStream("www.youtube.com/embed/k3WkJq478To");
     setLive(true);
+    setPlayPauseimg(pause)
     setPause("pause-screen2");
     setBtn("play-pause2");
     setBtn2("pauseBtn2");
   };
 
   const PurpleSkies = () => {
-    setVideo("www.youtube.com/embed/5WJa4SQu2K8");
+    setVideo("https://www.youtube.com/embed/5WJa4SQu2K8?start=15");
     setStationName("PurpleSkies");
     setLiveStream(
       "https://www.youtube.com/watch?v=5WJa4SQu2K8&ab_channel=VirtuaWaves"
     );
     setLive(true);
+    setPlayPauseimg(pause);
     setPause("pause-screen2");
     setBtn("play-pause2");
     setBtn2("pauseBtn2");
   };
 
   const CyberPunk = () => {
-    setVideo("/www.youtube.com/embed/y2ECgOhoDGs");
+    setVideo("https://www.youtube.com/embed/AGsPsHIB7eU?start=3");
     setStationName("CyberPunk");
     setLiveStream(
       "https://www.youtube.com/watch?v=y2ECgOhoDGs&ab_channel=MrSuicideSheep"
     );
     setLive(true);
+    setPlayPauseimg(pause);
     setPause("pause-screen2");
     setBtn("play-pause2");
     setBtn2("pauseBtn2");
@@ -85,22 +92,24 @@ const RadioPage = () => {
   //HipHop
 
   const TheBeat = () => {
-    setVideo("https://www.youtube.com/embed/LfKq9cmnO_A");
+    setVideo("https://www.youtube.com/embed/F1B9Fk_SgI0");
     setStationName("TheBeat");
     setLiveStream(
       "https://www.youtube.com/watch?v=aLqc8TdoLJ0&ab_channel=IvyStationRecords"
     );
     setLive(true);
+    setPlayPauseimg(pause);
     setPause("pause-screen2");
     setBtn("play-pause2");
     setBtn2("pauseBtn2");
   };
 
   const ChillHop = () => {
-    setVideo("https://www.youtube.com/embed/aGSYKFb_zxg");
+    setVideo("https://www.youtube.com/embed/UJH5Dgf62Vk?start=6");
     setStationName("ChillHop");
     setLiveStream("https://www.youtube.com/watch?v=aGSYKFb_zxg");
     setLive(true);
+    setPlayPauseimg(pause);
     setPause("pause-screen2");
     setBtn("play-pause2");
     setBtn2("pauseBtn2");
@@ -119,7 +128,7 @@ const RadioPage = () => {
   //Jazz
 
   const SmoothCriminal = () => {
-    setVideo("https://www.youtube.com/embed/llicpJ5q42s");
+    setVideo("https://www.youtube.com/embed/dLWy8ZgRPKE?start=26");
     setStationName("SmoothCriminal");
     setLiveStream(
       "https://www.youtube.com/watch?v=bz5q5gl2uZA&ab_channel=Musictag"
@@ -131,20 +140,24 @@ const RadioPage = () => {
   };
 
   const AmbientJazz = () => {
-    setVideo("https://www.youtube.com/embed/nCQuu7ukTEQ");
+    setVideo("https://www.youtube.com/embed/bz5q5gl2uZA");
     setStationName("AmbientJazz");
     setLiveStream("https://www.youtube.com/watch?v=nCQuu7ukTEQ");
     setLive(true);
+    setPlayPauseimg(pause);
     setPause("pause-screen2");
     setBtn("play-pause2");
     setBtn2("pauseBtn2");
   };
 
   const TheJazzCafe = () => {
-    setVideo("https://www.youtube.com/embed/EaK_W0SSO8o");
+    setVideo("https://www.youtube.com/embed/-5KAN9_CzSA?start=3");
     setStationName("TheJazzCafe");
-    setLiveStream("https://www.youtube.com/watch?v=EaK_W0SSO8o");
+    setLiveStream(
+      "https://www.youtube.com/watch?v=-5KAN9_CzSA&ab_channel=STEEZYASFUCK"
+    );
     setLive(true);
+    setPlayPauseimg(pause);
     setPause("pause-screen2");
     setBtn("play-pause2");
     setBtn2("pauseBtn2");
@@ -169,6 +182,27 @@ const RadioPage = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="audio-controls__container">
+        <AudioControls
+          PlayPause={handlePlayPause}
+          ButtonClass={Btn}
+          ButtonClass2={Btn2}
+          LiveStreamAudio={liveStream}
+          Live={live}
+          playPauseImg={playPauseImg}
+        />
+      </div>
+      <div className="video-container2">
+        <ReactPlayer
+          className="vid"
+          width="140%"
+          height="140%"
+          loop="true"
+          playing={live}
+          volume="mute"
+          url={video}
+        />
       </div>
     </>
   );

@@ -1,0 +1,56 @@
+// .audio-control{
+//     width: 99%;
+//     height: 10vh;
+//     text-align: center;
+//     font-size: 3rem;
+//     color: white;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     box-sizing: border-box;
+//     margin-top: auto;
+//     z-index: 1;
+// }
+
+// .audioOnImg, .audioOffImg{
+//     min-width: 20px;
+//     height: 20px;
+//     margin-left: -1px;
+//     filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
+//   }
+  
+//   .audioOffImg{
+//     filter: invert(93%) sepia(19%) saturate(2348%) hue-rotate(296deg) brightness(102%) contrast(103%);
+//   }
+
+//   .volumeOff, .volumeOn{
+//     border: #c7c7c7 1px solid;
+//     height: 40px;
+//     min-width: 40px;
+//     border-radius: 50%;
+//     margin-top: 3.3rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;margin-left: 6px;
+//     margin-right: 6px;
+//   }
+
+//   .volume-dial{
+//     border: #c7c7c7 1px solid;
+//     height: 1px;
+//     -webkit-appearance: none;
+//     width: 100px;
+//     margin-top: 4.7rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;margin-left: 6px;
+//     margin-left: 3px;
+//     border-radius: 30px;
+//     background-color: #C0C0C0;
+//   }
+
+//   .liveStreamPlayer{
+//     position: absolute;
+//     top: -1000px;
+//     left: -1000px;
+//   }
