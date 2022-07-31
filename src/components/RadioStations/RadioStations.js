@@ -13,6 +13,9 @@ const RadioStations = ({
     SmoothCriminal,
     AmbientJazz,
     TheJazzCafe,
+    TheDance,
+    Alien,
+    GoodVibes,
 }) => { 
   return (
     <>
@@ -126,6 +129,44 @@ const RadioStations = ({
         >
           <img className="triangle" src={start} alt="" />
           <span> The Jazz Cafe </span>
+        </motion.div>
+      </motion.div>
+
+      <h1 className="radio-title">Dance</h1>
+      
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.85 }}>
+        <motion.div
+          whileHover={{ scale: 1.25 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={TheDance}
+          className="station"
+        >
+          <img className="triangle" src={start} alt="" />
+          <span> The Dance </span>
+        </motion.div>
+      </motion.div>
+      
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.85 }}>
+        <motion.div
+          whileHover={{ scale: 1.25 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={Alien}
+          className="station"
+        >
+          <img className="triangle" src={start} alt="" />
+          <span> Outer World</span>
+        </motion.div>
+      </motion.div>
+     
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.85 }}>
+        <motion.div
+          whileHover={{ scale: 1.25 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={GoodVibes}
+          className="station"
+        >
+          <img className="triangle" src={start} alt="" />
+          <span> Good Vibes </span>
         </motion.div>
       </motion.div>
       </div>

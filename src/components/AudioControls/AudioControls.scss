@@ -1,56 +1,117 @@
-// .audio-control{
-//     width: 99%;
-//     height: 10vh;
-//     text-align: center;
-//     font-size: 3rem;
-//     color: white;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     box-sizing: border-box;
-//     margin-top: auto;
-//     z-index: 1;
-// }
+.audio-control{
+    width: 99%;
+    height: 10vh;
+    text-align: center;
+    font-size: 3rem;
+    position:absolute;
+    top:80%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: auto;
+    z-index: 1;
+}
 
-// .audioOnImg, .audioOffImg{
-//     min-width: 20px;
-//     height: 20px;
-//     margin-left: -1px;
-//     filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
-//   }
+.audioOnImg, .audioOffImg{
+    min-width: 30px;
+    height: 30px;
+    margin-left: -1px;
+    filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
+  }
   
-//   .audioOffImg{
-//     filter: invert(93%) sepia(19%) saturate(2348%) hue-rotate(296deg) brightness(102%) contrast(103%);
-//   }
+  .audioOffImg{
+    filter: invert(93%) sepia(19%) saturate(2348%) hue-rotate(296deg) brightness(102%) contrast(103%);
+  }
 
-//   .volumeOff, .volumeOn{
-//     border: #c7c7c7 1px solid;
-//     height: 40px;
-//     min-width: 40px;
-//     border-radius: 50%;
-//     margin-top: 3.3rem;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;margin-left: 6px;
-//     margin-right: 6px;
-//   }
+  .volumeOff, .volumeOn{
+    border: #c7c7c7 1px solid;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    margin-top: 3.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;margin-left: 6px;
+    margin-right: 6px;
+  }
 
-//   .volume-dial{
-//     border: #c7c7c7 1px solid;
-//     height: 1px;
-//     -webkit-appearance: none;
-//     width: 100px;
-//     margin-top: 4.7rem;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;margin-left: 6px;
-//     margin-left: 3px;
-//     border-radius: 30px;
-//     background-color: #C0C0C0;
-//   }
+  .volume-dial{
+    border: #c7c7c7 1px solid;
+    height: 1px;
+    -webkit-appearance: none;
+    width: 100px;
+    margin-top: 4.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;margin-left: 6px;
+    margin-left: 3px;
+    border-radius: 30px;
+    background-color: #C0C0C0;
+  }
 
-//   .liveStreamPlayer{
-//     position: absolute;
-//     top: -1000px;
-//     left: -1000px;
-//   }
+   .volume-dial:hover{
+    background-color: white;
+  }
+  
+  .volume-dial::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: #c7c7c7; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+  }
+  
+  .volume-dial::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #c7c7c7;
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+  }
+  
+  .volume-dial::-webkit-slider-thumb:hover{
+    background-color: white;
+  }
+  .liveStreamPlayer{
+    // position: absolute;
+    // top: -1000px;
+    // left: -1000px;
+    display:none
+  }
+
+.playBtn{
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
+  }
+  
+  .playBtn2{
+    width: 30px;
+    height: 30px;
+    margin-left: 0px;
+    filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
+  }
+
+  .play-pause, .play-pause2{
+    border: #c7c7c7 1px solid;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 50%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+    margin-right: 6px;
+  }
+
+  .play-pause:hover, .play-pause2:hover {
+    border: rgb(255, 255, 255) 2px solid;
+  }

@@ -1,20 +1,18 @@
-import React from "react";
 import "./RadioPage.scss";
 import play from "../../assets/images/playBtn.png";
+import pauseImg from "../../assets/images/pause.png";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import RadioStations from "../../components/RadioStations/RadioStations";
 import ReactPlayer from "react-player";
 import AudioControls from "../../components/AudioControls/AudioControls";
-import pause from "../../assets/images/pause.png";
 
 const RadioPage = () => {
   const [Btn, setBtn] = useState("play-pause");
   const [Btn2, setBtn2] = useState("playBtn");
-  const [playPauseImg, setPlayPauseimg] = useState(play);
+  const [playPause, setPlayPause] = useState(play);
 
   const [live, setLive] = useState(false);
-  const [pause, setPause] = useState("pause-screen");
+  const [pausePage, setPausePage] = useState("pause-screen");
   const [liveStream, setLiveStream] = useState(
     "www.youtube.com/embed/k3WkJq478To"
   );
@@ -27,22 +25,25 @@ const RadioPage = () => {
     let className = e.target.className;
 
     if (className === "play-pause" || className === "playBtn") {
+      setPlayPause(pauseImg);
       setBtn("play-pause2");
-      setBtn2("pauseBtn2");
-    } else if (className === "pause-screen2" || className === "playBtn2") {
+      setBtn2("playBtn2");
+      playMusic();
+    } else if (className === "play-pause2" || className === "playBtn2") {
+      setPlayPause(play);
       setBtn("play-pause");
       setBtn2("playBtn");
-      pause();
+      pauseMusic();
     }
   };
 
   const pauseMusic = () => {
-    setPause("pause-screen");
+    setPausePage("pause-screen");
     setLive(false);
   };
 
   const playMusic = () => {
-    setPause("pause-screen2");
+    setPausePage("pause-screen2");
     setLive(true);
   };
 
@@ -57,10 +58,10 @@ const RadioPage = () => {
     setStationName("ExpressWay");
     setLiveStream("www.youtube.com/embed/k3WkJq478To");
     setLive(true);
-    setPlayPauseimg(pause)
-    setPause("pause-screen2");
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
     setBtn("play-pause2");
-    setBtn2("pauseBtn2");
+    setBtn2("playBtn2");
   };
 
   const PurpleSkies = () => {
@@ -70,10 +71,10 @@ const RadioPage = () => {
       "https://www.youtube.com/watch?v=5WJa4SQu2K8&ab_channel=VirtuaWaves"
     );
     setLive(true);
-    setPlayPauseimg(pause);
-    setPause("pause-screen2");
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
     setBtn("play-pause2");
-    setBtn2("pauseBtn2");
+    setBtn2("playBtn2");
   };
 
   const CyberPunk = () => {
@@ -83,10 +84,10 @@ const RadioPage = () => {
       "https://www.youtube.com/watch?v=y2ECgOhoDGs&ab_channel=MrSuicideSheep"
     );
     setLive(true);
-    setPlayPauseimg(pause);
-    setPause("pause-screen2");
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
     setBtn("play-pause2");
-    setBtn2("pauseBtn2");
+    setBtn2("playBtn2");
   };
 
   //HipHop
@@ -98,10 +99,10 @@ const RadioPage = () => {
       "https://www.youtube.com/watch?v=aLqc8TdoLJ0&ab_channel=IvyStationRecords"
     );
     setLive(true);
-    setPlayPauseimg(pause);
-    setPause("pause-screen2");
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
     setBtn("play-pause2");
-    setBtn2("pauseBtn2");
+    setBtn2("playBtn2");
   };
 
   const ChillHop = () => {
@@ -109,10 +110,10 @@ const RadioPage = () => {
     setStationName("ChillHop");
     setLiveStream("https://www.youtube.com/watch?v=aGSYKFb_zxg");
     setLive(true);
-    setPlayPauseimg(pause);
-    setPause("pause-screen2");
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
     setBtn("play-pause2");
-    setBtn2("pauseBtn2");
+    setBtn2("playBtn2");
   };
 
   const TheBreak = () => {
@@ -120,9 +121,10 @@ const RadioPage = () => {
     setStationName("TheBreak");
     setLiveStream("https://www.youtube.com/watch?v=zVqJv_dKUEs");
     setLive(true);
-    setPause("pause-screen2");
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
     setBtn("play-pause2");
-    setBtn2("pauseBtn2");
+    setBtn2("playBtn2");
   };
 
   //Jazz
@@ -134,9 +136,10 @@ const RadioPage = () => {
       "https://www.youtube.com/watch?v=bz5q5gl2uZA&ab_channel=Musictag"
     );
     setLive(true);
-    setPause("pause-screen2");
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
     setBtn("play-pause2");
-    setBtn2("pauseBtn2");
+    setBtn2("playBtn2");
   };
 
   const AmbientJazz = () => {
@@ -144,10 +147,10 @@ const RadioPage = () => {
     setStationName("AmbientJazz");
     setLiveStream("https://www.youtube.com/watch?v=nCQuu7ukTEQ");
     setLive(true);
-    setPlayPauseimg(pause);
-    setPause("pause-screen2");
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
     setBtn("play-pause2");
-    setBtn2("pauseBtn2");
+    setBtn2("playBtn2");
   };
 
   const TheJazzCafe = () => {
@@ -157,10 +160,49 @@ const RadioPage = () => {
       "https://www.youtube.com/watch?v=-5KAN9_CzSA&ab_channel=STEEZYASFUCK"
     );
     setLive(true);
-    setPlayPauseimg(pause);
-    setPause("pause-screen2");
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
     setBtn("play-pause2");
-    setBtn2("pauseBtn2");
+    setBtn2("playBtn2");
+  };
+
+  // Dance
+
+  const TheDance = () => {
+    setVideo("https://www.youtube.com/embed/a7kieyUH45Y");
+    setStationName("TheDance");
+    setLiveStream("https://www.youtube.com/embed/Khd-uyOuhGo");
+    setLive(true);
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
+    setBtn("play-pause2");
+    setBtn2("playBtn2");
+  };
+
+  const Alien = () => {
+    setVideo("https://www.youtube.com/embed/wVKDb9RTkrI");
+    setStationName("Alien");
+    setLiveStream(
+      "https://www.youtube.com/watch?v=n__NrG-QGb4&ab_channel=KiffenBeats"
+    );
+    setLive(true);
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
+    setBtn("play-pause2");
+    setBtn2("playBtn2");
+  };
+
+  const GoodVibes = () => {
+    setVideo("https://www.youtube.com/embed/zdYzL6wkr0A");
+    setStationName("GoodVibes");
+    setLiveStream(
+      "https://www.youtube.com/watch?v=EHvDNpJK_Ks&ab_channel=KiffenBeats"
+    );
+    setLive(true);
+    setPlayPause(pauseImg);
+    setPausePage("pause-screen2");
+    setBtn("play-pause2");
+    setBtn2("playBtn2");
   };
 
   return (
@@ -179,6 +221,9 @@ const RadioPage = () => {
               SmoothCriminal={SmoothCriminal}
               AmbientJazz={AmbientJazz}
               TheJazzCafe={TheJazzCafe}
+              TheDance={TheDance}
+              Alien={Alien}
+              GoodVibes={GoodVibes}
             />
           </div>
         </div>
@@ -190,8 +235,11 @@ const RadioPage = () => {
           ButtonClass2={Btn2}
           LiveStreamAudio={liveStream}
           Live={live}
-          playPauseImg={playPauseImg}
+          playPauseImg={playPause}
         />
+      </div>
+      <div className={pausePage}>
+        <p className="pause-title">Music Paused</p>
       </div>
       <div className="video-container2">
         <ReactPlayer

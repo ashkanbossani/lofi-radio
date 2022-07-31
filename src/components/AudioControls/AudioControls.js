@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
 import "./AudioControls.scss";
 
+let lastPlayedVolume = 0;
 const AudioControls = ({
   PlayPause,
   ButtonClass,
@@ -19,13 +20,13 @@ const AudioControls = ({
       setVolumeImg(mute);
       setUnmute("volumeOff");
       setUnmute2("audioOffImg");
-        // lastPlayedVolume = volume;
+      lastPlayedVolume = volume;
       setVolume(0);
     } else if (classNameVol === "volumeOff" || classNameVol === "audioOffImg") {
       setVolumeImg(volumeOn);
       setUnmute("volumeOn");
       setUnmute2("audioOnImg");
-        // setVolume(lastPlayedVolume);
+      setVolume(lastPlayedVolume);
     }
   };
 
