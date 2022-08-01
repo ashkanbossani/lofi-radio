@@ -1,0 +1,27 @@
+.timer-button--play{
+    background-color: transparent;
+    filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(100%) contrast(86%);
+    border:0;
+    width:20px;
+    position:absolute;
+    right:6.5rem;
+    bottom:4rem;
+    cursor: pointer;
+}
+
+.timer-button--pause{
+    background-color: transparent;
+    filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
+    border:0;
+    width:20px;
+    position:absolute;
+    right:6.5rem;
+    bottom:4rem;
+    cursor: pointer;
+}
+
+.pomodoro-timer{
+    width:200px;
+    height:200px;
+    font-family: "Montserrat", sans-serif;
+}

@@ -173,7 +173,7 @@ h1.title{
   font-weight: 200;
   }
 
-  button::before {
+  .welcome-button::before {
     content: '';
       border-radius: 1000px;
       min-width: calc(400px + 12px);
@@ -194,11 +194,11 @@ h1.title{
       transform: translateY(-6px);
     }
     
-    button:hover::before, button:focus::before {
+    .welcome-button:hover::before, button:focus::before {
       opacity: 1;
     }
     
-    button::after {
+    .welcome-button::after {
       content: '';
       width: 400px; height: 30px;
       border-radius: 100%;
@@ -211,7 +211,7 @@ h1.title{
       animation: ring 2.5s infinite;
     }
     
-    button:hover::after, button:focus::after {
+    .welcome-button:hover::after, .welcome-button:focus::after {
       cursor:none;
       pointer-events: none;
     }

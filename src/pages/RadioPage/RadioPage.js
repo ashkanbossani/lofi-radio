@@ -5,6 +5,10 @@ import { useState } from "react";
 import RadioStations from "../../components/RadioStations/RadioStations";
 import ReactPlayer from "react-player";
 import AudioControls from "../../components/AudioControls/AudioControls";
+import Timer from "../../components/Timer/Timer";
+import SettingsScreen from "../../components/SettingsScreen/SettingsScreen";
+import SettingsContext from "../../components/SettingsContext/SettingsContext";
+import Draggable from "react-draggable";
 
 const RadioPage = () => {
   const [Btn, setBtn] = useState("play-pause");
@@ -17,9 +21,13 @@ const RadioPage = () => {
     "www.youtube.com/embed/k3WkJq478To"
   );
 
+  const [showSettings, setShowSettings] = useState(false);
+  const [workMinutes, setWorkMinutes] = useState(45);
+  const [breakMinutes, setBreakMinutes] = useState(15);
+
   const [stationName, setStationName] = useState("ExpressWay");
 
-  const [channel, setChannel] = useState("");
+  // const [channel, setChannel] = useState("");
 
   const handlePlayPause = (e) => {
     let className = e.target.className;
@@ -252,6 +260,21 @@ const RadioPage = () => {
           url={video}
         />
       </div>
+      <Draggable>
+      <div className="timer">
+        <SettingsContext.Provider value={{
+          showSettings,
+          setShowSettings,
+          workMinutes,
+          breakMinutes,
+          setWorkMinutes,
+          setBreakMinutes,
+        }}>
+        {showSettings ? <SettingsScreen/> : <Timer/>}
+        </SettingsContext.Provider>
+      </div>
+      </Draggable>
+    
     </>
   );
 };

@@ -32,8 +32,8 @@ class HomePage extends React.Component {
             <Link to="/music">
               <button class="welcome-button">Welcome</button>
             </Link>
-            <div class="note-position-1 note-amination">&#9835;</div>
-            <div class="note-position-2 note-amination animation-delay-2">
+            <div className="note-position-1 note-amination">&#9835;</div>
+            <div className="note-position-2 note-amination animation-delay-2">
               &#9833;
             </div>
             {/* <div class="note-position-3 note-amination animation-delay-3">
