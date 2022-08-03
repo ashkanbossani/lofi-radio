@@ -120,3 +120,26 @@ html, body {
   margin: auto;
   user-select: none;
 }
+
+.todo{
+  position: absolute;
+  top:-5rem;
+  left:15rem;
+  cursor: move;
+  color: black;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 1em;
+  margin: auto;
+  user-select: none;
+    display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background: transparent;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}

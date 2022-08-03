@@ -9,6 +9,7 @@ import Timer from "../../components/Timer/Timer";
 import SettingsScreen from "../../components/SettingsScreen/SettingsScreen";
 import SettingsContext from "../../components/SettingsContext/SettingsContext";
 import Draggable from "react-draggable";
+import TodoList from "../../components/TodoList/TodoList";
 
 const RadioPage = () => {
   const [Btn, setBtn] = useState("play-pause");
@@ -272,6 +273,11 @@ const RadioPage = () => {
         }}>
         {showSettings ? <SettingsScreen/> : <Timer/>}
         </SettingsContext.Provider>
+      </div>
+      </Draggable>
+      <Draggable>
+      <div className="todo">
+        <TodoList/>
       </div>
       </Draggable>
     
