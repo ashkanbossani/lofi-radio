@@ -283,11 +283,11 @@ const RadioPage = () => {
         </SettingsContext.Provider>
       </div>
       </Draggable>
-      <Draggable>
+
       <div className="todo">
         <TodoList/>
       </div>
-      </Draggable>
+      
     
     </>
   );

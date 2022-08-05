@@ -5,7 +5,7 @@ import "./Timer.scss";
 import SettingsButton from "../SettingsButton/SettingsButton";
 import playTimer from "../../assets/images/playBtn.png";
 import pauseTimer from "../../assets/images/pause.png";
-import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import SettingsContext from "../SettingsContext/SettingsContext";
 
 const red = "#f54e4e";

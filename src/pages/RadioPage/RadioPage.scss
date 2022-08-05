@@ -119,6 +119,7 @@ html, body {
   padding: 1em;
   margin: auto;
   user-select: none;
+  z-index:1000;
 }
 
 .todo{
@@ -142,4 +143,5 @@ html, body {
   margin: 128px auto;
   border-radius: 10px;
   padding-bottom: 32px;
+  z-index:1000;
 }
