@@ -22,10 +22,14 @@ const Timer = () => {
   const isPausedRef = useRef(isPaused);
   const modeRef = useRef(mode);
 
+  //This code is setting up a timer that counts down from 60 seconds. Every time the timer ticks, the secondsLeftRef.current value is decremented by 1. The setSecondsLeft function is then used to update the SecondsLeft state with the new value.
+
   function tick() {
     secondsLeftRef.current--;
     setSecondsLeft(secondsLeftRef.current);
   }
+
+  // This code is using the useEffect hook to set up an interval that will call the tick function every second. It is also using the modeRef and secondsLeftRef to keep track of the mode and seconds left.
 
   useEffect(() => {
     function switchMode() {

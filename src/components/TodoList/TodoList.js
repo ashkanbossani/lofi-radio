@@ -7,6 +7,7 @@ function TodoList() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = todo => {
+    // uses RegExp test method to test whether a string val is empty or only contains spaces.
     if (!todo.text || /^\s*$/.test(todo.text)) {
       return;
     }
@@ -14,11 +15,11 @@ function TodoList() {
     const newTodos = [todo, ...todos];
 
     setTodos(newTodos);
-    console.log(...todos);
+
   };
 
   const updateTodo = (todoId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
+    if (!newValue.text || newValue.text.trim().length === 0) {
       return;
     }
 

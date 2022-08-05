@@ -9,15 +9,18 @@ function TodoForm(props) {
   useEffect(() => {
     inputRef.current.focus();
   });
-
+  
+//Sets targer value to input value
   const handleChange = e => {
     setInput(e.target.value);
   };
 
   const handleSubmit = e => {
+    //prevents the page from reloading
     e.preventDefault();
 
     props.onSubmit({
+      //Generates a random id for each todo
       id: Math.floor(Math.random() * 10000),
       text: input
     });

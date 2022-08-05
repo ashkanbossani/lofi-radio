@@ -10,6 +10,7 @@ import SettingsScreen from "../../components/SettingsScreen/SettingsScreen";
 import SettingsContext from "../../components/SettingsContext/SettingsContext";
 import Draggable from "react-draggable";
 import TodoList from "../../components/TodoList/TodoList";
+import { Link  } from "react-router-dom";
 
 const RadioPage = () => {
   const [Btn, setBtn] = useState("play-pause");
@@ -28,8 +29,13 @@ const RadioPage = () => {
 
   const [stationName, setStationName] = useState("ExpressWay");
 
-  // const [channel, setChannel] = useState("");
 
+
+  //  handlePlayPause is a function that takes in an event (e) object as a parameter. It then defines a variable, className, and sets it equal to the className property of the event target (e.target). 
+
+  //If the className is equal to "play-pause" or "playBtn", the function sets the playPause state variable to pauseImg, sets the btn state variable to "play-pause2", and sets the btn2 state variable to "playBtn2". It then calls the playMusic function.
+
+  //If the className is equal to "play-pause2" or "playBtn2", the function sets the playPause state variable to play, sets the btn state variable to "play-pause", and sets the btn2 state variable to "playBtn". It then calls the pauseMusic function.
   const handlePlayPause = (e) => {
     let className = e.target.className;
 
@@ -218,7 +224,9 @@ const RadioPage = () => {
     <>
       <div className="main-container">
         <div className="radio-container">
+          <Link style={{textDecoration: 'none'}} to ="/">
           <div className="logo">Lo-fi Radio</div>
+          </Link>
           <div className="radio-stations__container">
             <RadioStations
               Express={ExpressWay}
