@@ -270,24 +270,25 @@ const RadioPage = () => {
         />
       </div>
       <Draggable>
-      <div className="timer">
-        <SettingsContext.Provider value={{
-          showSettings,
-          setShowSettings,
-          workMinutes,
-          breakMinutes,
-          setWorkMinutes,
-          setBreakMinutes,
-        }}>
-        {showSettings ? <SettingsScreen/> : <Timer/>}
-        </SettingsContext.Provider>
-      </div>
+        <div className="timer">
+          <SettingsContext.Provider value={{
+            showSettings,
+            setShowSettings,
+            workMinutes,
+            breakMinutes,
+            setWorkMinutes,
+            setBreakMinutes,
+          }}>
+          {showSettings ? <SettingsScreen/> : <Timer/>}
+          </SettingsContext.Provider>
+        </div>
       </Draggable>
 
-      <div className="todo">
-        <TodoList/>
-      </div>
-      
+      <Draggable>
+        <div className="todo">
+          <TodoList/>
+        </div>
+      </Draggable>
     
     </>
   );
