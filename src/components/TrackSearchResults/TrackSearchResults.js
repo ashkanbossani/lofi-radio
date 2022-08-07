@@ -1,27 +1,20 @@
-import React from "react"
-
-import {
-  ResultContainer,
-  ResultImage,
-  SongContainer,
-  TitleText,
-  ArtistText,
-} from "../../styles/TrackSearchResults.styles"
+import React from "react";
+import "./TrackSearchResults.scss";
 
 const TrackSearchResult = ({ track, chooseTrack }) => {
   function handlePlay() {
-    chooseTrack(track)
+    chooseTrack(track);
   }
 
   return (
-    <ResultContainer onClick={handlePlay}>
-      <ResultImage src={track.albumUrl} />
-      <SongContainer>
-        <TitleText>{track.title}</TitleText>
-        <ArtistText>{track.artist}</ArtistText>
-      </SongContainer>
-    </ResultContainer>
-  )
-}
+    <div className="result-container" onClick={handlePlay}>
+      <img className="result-image" src={track.albumUrl} />
+      <div className="song-container">
+        <p className="title-text">{track.title}</p>
+        <p className="artist-text">{track.artist}</p>
+      </div>
+    </div>
+  );
+};
 
-export default TrackSearchResult
+export default TrackSearchResult;
