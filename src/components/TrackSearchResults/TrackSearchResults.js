@@ -8,7 +8,7 @@ const TrackSearchResult = ({ track, chooseTrack }) => {
 
   return (
     <div className="result-container" onClick={handlePlay}>
-      <img className="result-image" src={track.albumUrl} />
+      <img className="result-image" alt="album" src={track.albumUrl} />
       <div className="song-container">
         <p className="title-text">{track.title}</p>
         <p className="artist-text">{track.artist}</p>

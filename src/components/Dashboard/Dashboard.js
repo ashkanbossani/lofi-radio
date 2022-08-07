@@ -80,7 +80,7 @@ const Dashboard = ({ code }) => {
   return (
     <div className="dashboard-container">
         <Link to="/music">
-        <button class="button-64" role="button"><span class="text">RADIO</span></button>
+        <button class="button-64"><span class="text">RADIO</span></button>
         </Link>
       <input className="search-input"
         type="search"
