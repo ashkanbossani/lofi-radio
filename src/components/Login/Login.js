@@ -1,4 +1,5 @@
 import React from "react"
+import "./Login.scss"
 
 import { LoginButton, LoginLink } from "../../styles/login.styles"
 
@@ -9,9 +10,12 @@ const Login = () => {
   const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=${REACT_APP_CLIENT_ID}&response_type=code&redirect_uri=${REACT_APP_REDIRECT_URI}&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state`
 
   return (
+    <>
+    <p className="title-login">The Lounge</p>
     <LoginButton>
       <LoginLink href={AUTH_URL}>Login with Spotify</LoginLink>
     </LoginButton>
+    </>
   )
 }
 

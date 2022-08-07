@@ -11,7 +11,7 @@ import SettingsContext from "../../components/SettingsContext/SettingsContext";
 import Draggable from "react-draggable";
 import TodoList from "../../components/TodoList/TodoList";
 import { Link  } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 const RadioPage = () => {
   const [Btn, setBtn] = useState("play-pause");
   const [Btn2, setBtn2] = useState("playBtn");
@@ -27,7 +27,7 @@ const RadioPage = () => {
   const [workMinutes, setWorkMinutes] = useState(45);
   const [breakMinutes, setBreakMinutes] = useState(15);
 
-  const [stationName, setStationName] = useState("ExpressWay");
+  const [stationName, setStationName] = useState("EXPRESS WAY");
 
 
 
@@ -70,7 +70,7 @@ const RadioPage = () => {
 
   const ExpressWay = () => {
     setVideo("www.youtube.com/embed/k3WkJq478To");
-    setStationName("ExpressWay");
+    setStationName("EXPRESS WAY");
     setLiveStream("www.youtube.com/embed/k3WkJq478To");
     setLive(true);
     setPlayPause(pauseImg);
@@ -81,7 +81,7 @@ const RadioPage = () => {
 
   const PurpleSkies = () => {
     setVideo("https://www.youtube.com/embed/5WJa4SQu2K8?start=15");
-    setStationName("PurpleSkies");
+    setStationName("PURPLE SKIES");
     setLiveStream(
       "https://www.youtube.com/watch?v=5WJa4SQu2K8&ab_channel=VirtuaWaves"
     );
@@ -94,7 +94,7 @@ const RadioPage = () => {
 
   const CyberPunk = () => {
     setVideo("https://www.youtube.com/embed/AGsPsHIB7eU?start=3");
-    setStationName("CyberPunk");
+    setStationName("CYBER PUNK");
     setLiveStream(
       "https://www.youtube.com/watch?v=y2ECgOhoDGs&ab_channel=MrSuicideSheep"
     );
@@ -109,7 +109,7 @@ const RadioPage = () => {
 
   const TheBeat = () => {
     setVideo("https://www.youtube.com/embed/F1B9Fk_SgI0");
-    setStationName("TheBeat");
+    setStationName("THE BEAT");
     setLiveStream(
       "https://www.youtube.com/watch?v=aLqc8TdoLJ0&ab_channel=IvyStationRecords"
     );
@@ -122,7 +122,7 @@ const RadioPage = () => {
 
   const ChillHop = () => {
     setVideo("https://www.youtube.com/embed/UJH5Dgf62Vk?start=6");
-    setStationName("ChillHop");
+    setStationName("CHILL HOP");
     setLiveStream("https://www.youtube.com/watch?v=aGSYKFb_zxg");
     setLive(true);
     setPlayPause(pauseImg);
@@ -133,7 +133,7 @@ const RadioPage = () => {
 
   const TheBreak = () => {
     setVideo("https://www.youtube.com/embed/e6UbNoNvl80");
-    setStationName("TheBreak");
+    setStationName("THE BREAK");
     setLiveStream("https://www.youtube.com/watch?v=zVqJv_dKUEs");
     setLive(true);
     setPlayPause(pauseImg);
@@ -146,7 +146,7 @@ const RadioPage = () => {
 
   const SmoothCriminal = () => {
     setVideo("https://www.youtube.com/embed/dLWy8ZgRPKE?start=26");
-    setStationName("SmoothCriminal");
+    setStationName("SMOOTH CRIMINAL");
     setLiveStream(
       "https://www.youtube.com/watch?v=bz5q5gl2uZA&ab_channel=Musictag"
     );
@@ -159,7 +159,7 @@ const RadioPage = () => {
 
   const AmbientJazz = () => {
     setVideo("https://www.youtube.com/embed/bz5q5gl2uZA");
-    setStationName("AmbientJazz");
+    setStationName("AMBIENT JAZZ");
     setLiveStream("https://www.youtube.com/watch?v=nCQuu7ukTEQ");
     setLive(true);
     setPlayPause(pauseImg);
@@ -170,7 +170,7 @@ const RadioPage = () => {
 
   const TheJazzCafe = () => {
     setVideo("https://www.youtube.com/embed/-5KAN9_CzSA?start=3");
-    setStationName("TheJazzCafe");
+    setStationName("THE JAZZ CAFE");
     setLiveStream(
       "https://www.youtube.com/watch?v=-5KAN9_CzSA&ab_channel=STEEZYASFUCK"
     );
@@ -185,7 +185,7 @@ const RadioPage = () => {
 
   const TheDance = () => {
     setVideo("https://www.youtube.com/embed/a7kieyUH45Y");
-    setStationName("TheDance");
+    setStationName("THE DANCE");
     setLiveStream("https://www.youtube.com/embed/Khd-uyOuhGo");
     setLive(true);
     setPlayPause(pauseImg);
@@ -196,7 +196,7 @@ const RadioPage = () => {
 
   const Alien = () => {
     setVideo("https://www.youtube.com/embed/wVKDb9RTkrI");
-    setStationName("Alien");
+    setStationName("ALIEN");
     setLiveStream(
       "https://www.youtube.com/watch?v=n__NrG-QGb4&ab_channel=KiffenBeats"
     );
@@ -209,7 +209,7 @@ const RadioPage = () => {
 
   const GoodVibes = () => {
     setVideo("https://www.youtube.com/embed/zdYzL6wkr0A");
-    setStationName("GoodVibes");
+    setStationName("GOOD VIBES");
     setLiveStream(
       "https://www.youtube.com/watch?v=EHvDNpJK_Ks&ab_channel=KiffenBeats"
     );
@@ -222,6 +222,9 @@ const RadioPage = () => {
 
   return (
     <>
+    <Helmet>
+      <title>{stationName}</title>
+    </Helmet>
       <div className="main-container">
         <div className="radio-container">
           <Link style={{textDecoration: 'none'}} to ="/">
@@ -291,7 +294,7 @@ const RadioPage = () => {
       </Draggable>
       <div className="chilllounge-btn">
         <Link style={{textDecoration: 'none'}} to="/chill">
-        <button className="chilllounge-btn__btn">The Lounge</button>
+        <button class="button-62" role="button"><span class="text">LOUNGE</span></button>
         </Link>
       </div>
     

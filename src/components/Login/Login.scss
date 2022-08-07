@@ -1,0 +1,16 @@
+.title-login{
+    color:white;
+    padding-bottom:10rem;
+    display:flex;
+    justify-content: center;
+    animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)0.5s both;
+    z-index: 2;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 8rem;
+    transform: scale(1, 0.9);
+    color: #fff;
+}

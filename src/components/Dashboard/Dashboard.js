@@ -87,7 +87,7 @@ const Dashboard = ({ code }) => {
   return (
     <DashBoardContainer>
         <Link to="/music">
-        <button class="button-64" role="button"><span class="text">Back</span></button>
+        <button class="button-64" role="button"><span class="text">RADIO</span></button>
         </Link>
       <SearchInput
         type="search"

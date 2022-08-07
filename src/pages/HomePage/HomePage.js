@@ -2,11 +2,15 @@ import React from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
 import "./HomePage.scss";
+import { Helmet } from "react-helmet";
 
 class HomePage extends React.Component {
   render() {
     return (
       <>
+      <Helmet>
+        <title>RADIO</title>
+      </Helmet>
         <div>
           <div className="hero-container">
             <div className="overlay"></div>
