@@ -196,7 +196,7 @@ const RadioPage = () => {
 
   const Alien = () => {
     setVideo("https://www.youtube.com/embed/wVKDb9RTkrI");
-    setStationName("ALIEN");
+    setStationName("OUTER WORLD");
     setLiveStream(
       "https://www.youtube.com/watch?v=n__NrG-QGb4&ab_channel=KiffenBeats"
     );
