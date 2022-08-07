@@ -6,13 +6,6 @@ import TrackSearchResult from "../TrackSearchResults/TrackSearchResults"
 import SpotifyWebApi from "spotify-web-api-node"
 import axios from "axios"
 import "./Dashboard.scss"
-import {
-  DashBoardContainer,
-  SearchInput,
-  ResultsContainer,
-  LyricsContainer,
-  PlayerContainer,
-} from "../../styles/Dashboard.styles"
 
 const spotifyApi = new SpotifyWebApi({
   clientId: "4e54f2e7db4241989b2cb1afd294535d",
@@ -85,17 +78,17 @@ const Dashboard = ({ code }) => {
   }, [search, accessToken])
 
   return (
-    <DashBoardContainer>
+    <div className="dashboard-container">
         <Link to="/music">
         <button class="button-64" role="button"><span class="text">RADIO</span></button>
         </Link>
-      <SearchInput
+      <input className="search-input"
         type="search"
         placeholder="Search Songs/Artists"
         value={search}
         onChange={e => setSearch(e.target.value)}
       />
-      <ResultsContainer>
+      <div className="results-container">
         {searchResults.map(track => (
           <TrackSearchResult
             track={track}
@@ -104,13 +97,13 @@ const Dashboard = ({ code }) => {
           />
         ))}
         {searchResults.length === 0 && (
-          <LyricsContainer>{lyrics}</LyricsContainer>
+          <div className="lyrics-container">{lyrics}</div>
         )}
-      </ResultsContainer>
-      <PlayerContainer>
+      </div>
+      <div className="player-container">
         <Player accessToken={accessToken} trackUri={playingTrack?.uri} />
-      </PlayerContainer>
-    </DashBoardContainer>
+      </div>
+    </div>
   )
 }
 
