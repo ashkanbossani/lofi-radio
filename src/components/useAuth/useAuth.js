@@ -6,7 +6,7 @@ const useAuth = code => {
   const [refreshToken, setRefreshToken] = useState()
   const [expiresIn, setExpiresIn] = useState()
 
-  const REACT_APP_BASE_URL = "http://localhost:3001"
+  const REACT_APP_BASE_URL = "http://localhost:5050"
 
   useEffect(() => {
     (async () => {

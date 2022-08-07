@@ -11,7 +11,7 @@ const spotifyApi = new SpotifyWebApi({
   clientId: "4e54f2e7db4241989b2cb1afd294535d",
 })
 
-const REACT_APP_BASE_URL = "http://localhost:3001"
+const REACT_APP_BASE_URL = "http://localhost:5050"
 
 const Dashboard = ({ code }) => {
   const accessToken = useAuth(code)
