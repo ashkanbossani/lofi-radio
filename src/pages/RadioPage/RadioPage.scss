@@ -145,3 +145,21 @@ html, body {
   padding-bottom: 32px;
   z-index:1000;
 }
+
+.chilllounge-btn{
+  position:absolute;
+  right:0rem;
+  bottom:6rem;
+  right:2rem;
+  z-index: 1;
+
+  &__btn{
+    width:7rem;
+    height:3rem;
+    background:transparent;
+    color:white;
+    font-family:"Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight:600;
+  }
+}

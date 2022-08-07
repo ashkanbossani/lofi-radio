@@ -289,6 +289,11 @@ const RadioPage = () => {
           <TodoList/>
         </div>
       </Draggable>
+      <div className="chilllounge-btn">
+        <Link style={{textDecoration: 'none'}} to="/chill">
+        <button className="chilllounge-btn__btn">Chill Lounge</button>
+        </Link>
+      </div>
     
     </>
   );
