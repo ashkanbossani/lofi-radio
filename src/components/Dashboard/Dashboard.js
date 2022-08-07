@@ -5,6 +5,7 @@ import Player from "../Player/Player"
 import TrackSearchResult from "../TrackSearchResults/TrackSearchResults"
 import SpotifyWebApi from "spotify-web-api-node"
 import axios from "axios"
+import "./Dashboard.scss"
 import {
   DashBoardContainer,
   SearchInput,
@@ -86,7 +87,7 @@ const Dashboard = ({ code }) => {
   return (
     <DashBoardContainer>
         <Link to="/music">
-        <button>Back</button>
+        <button class="button-64" role="button"><span class="text">Back</span></button>
         </Link>
       <SearchInput
         type="search"
