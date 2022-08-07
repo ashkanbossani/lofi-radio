@@ -6,7 +6,7 @@ import {
   SongContainer,
   TitleText,
   ArtistText,
-} from "./styles/TrackSearchResults.styles"
+} from "../../styles/TrackSearchResults.styles"
 
 const TrackSearchResult = ({ track, chooseTrack }) => {
   function handlePlay() {
