@@ -1,8 +1,6 @@
 import React from "react"
 import "./Login.scss"
 
-import { LoginButton, LoginLink } from "../../styles/login.styles"
-
 const REACT_APP_CLIENT_ID = "4e54f2e7db4241989b2cb1afd294535d"
 const REACT_APP_REDIRECT_URI = "http://localhost:3000/chill"
 
@@ -12,9 +10,9 @@ const Login = () => {
   return (
     <>
     <p className="title-login">The Lounge</p>
-    <LoginButton>
-      <LoginLink href={AUTH_URL}>Login with Spotify</LoginLink>
-    </LoginButton>
+    <button className="login-button">
+      <a className="login-link" href={AUTH_URL}>Login with Spotify</a>
+    </button>
     </>
   )
 }
