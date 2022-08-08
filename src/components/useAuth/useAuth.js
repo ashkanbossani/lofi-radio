@@ -19,9 +19,8 @@ const useAuth = code => {
         setAccessToken(access_token)
         setRefreshToken(refresh_token)
         setExpiresIn(expires_in)
-        // window.history.pushState({}, null, `/chill/`)
       } catch {
-        // window.location = `/chill/`
+        window.location = "/"
       }
     })()
   }, [code])
