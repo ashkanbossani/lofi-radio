@@ -2,10 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import "./TodoForm.scss";
 
 function TodoForm(props) {
-  const [input, setInput] = useState(props.edit ? props.edit.value : '');
+  //set input to empty string when component mounts
+  const [input, setInput] = useState('');
 
   const inputRef = useRef(null);
 
+  //useEffect to focus on input when component mounts and when component unmounts
   useEffect(() => {
     inputRef.current.focus();
   });
@@ -29,22 +31,7 @@ function TodoForm(props) {
 
   return (
     <form onSubmit={handleSubmit} className='todo-form'>
-      {props.edit ? (
-        <>
-          <input
-            placeholder='Update your item'
-            value={input}
-            onChange={handleChange}
-            name='text'
-            ref={inputRef}
-            className='todo-input edit'
-          />
-          <button onClick={handleSubmit} className='todo-button edit'>
-            Update
-          </button>
-        </>
-      ) : (
-        <>
+   <>
           <input
             placeholder='Add a todo'
             value={input}
@@ -57,7 +44,6 @@ function TodoForm(props) {
             Add todo
           </button>
         </>
-      )}
     </form>
   );
 }
