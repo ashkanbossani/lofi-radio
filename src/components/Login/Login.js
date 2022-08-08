@@ -1,5 +1,6 @@
 import React from "react"
 import "./Login.scss"
+import { Link } from "react-router-dom"
 
 const REACT_APP_CLIENT_ID = "4e54f2e7db4241989b2cb1afd294535d"
 const REACT_APP_REDIRECT_URI = "http://localhost:3000/chill"
@@ -9,7 +10,9 @@ const Login = () => {
 
   return (
     <>
+    <Link to ="/music">
     <button class="button-62"><span class="text">RADIO</span></button>
+    </Link>
     <p className="title-login">The Lounge</p>
     <button className="login-button">
       <a className="login-link" href={AUTH_URL}>Login with Spotify</a>
