@@ -118,7 +118,27 @@ Install dependencies
   npm install
 ```
 
+Clone Server code 
+
+```bash
+  git clone git@github.com:ashkanbossani/lofi-radio-server.git
+```
+
+Install dependencies
+
+```bash'
+  cd server
+  npm install
+```
+
 Start the server
+
+```bash
+  cd server
+  node index
+```
+
+Start the client
 
 ```bash
   npm start
@@ -135,7 +155,7 @@ Project Link: [https://github.com/ashkanbossani/lofi-radio
 <!-- Acknowledgments -->
 ## Acknowledgements
 
-Use this section to mention useful resources and libraries that you have used in your projects.
+Resources and libraries used in this project.
 
  - [Framer.com](https://www.framer.com/motion/)
  - [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar)
