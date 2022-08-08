@@ -17,7 +17,7 @@ const RadioPage = () => {
   const [Btn2, setBtn2] = useState("playBtn");
   const [playPause, setPlayPause] = useState(play);
 
-  const [live, setLive] = useState(false);
+  const [live, setLive] = useState(true);
   const [pausePage, setPausePage] = useState("pause-screen");
   const [liveStream, setLiveStream] = useState(
     "www.youtube.com/embed/k3WkJq478To"
@@ -28,8 +28,6 @@ const RadioPage = () => {
   const [breakMinutes, setBreakMinutes] = useState(15);
 
   const [stationName, setStationName] = useState("EXPRESS WAY");
-
-
 
   //  handlePlayPause is a function that takes in an event (e) object as a parameter. It then defines a variable, className, and sets it equal to the className property of the event target (e.target). 
 

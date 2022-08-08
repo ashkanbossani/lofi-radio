@@ -7,15 +7,16 @@
   .todo-row {
     display: flex;
     justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
     align-items: center;
     margin: 4px auto;
     color: #fff;
     background: transparent;
     border: 2px solid #5d0cff;
       
-    padding: 16px;
+    padding: 12px;
     border-radius: 5px;
-    width: 90%;
+    width: 80%;
   }
   
   .icons {
