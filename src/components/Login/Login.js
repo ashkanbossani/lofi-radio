@@ -9,6 +9,7 @@ const Login = () => {
 
   return (
     <>
+    <button class="button-62"><span class="text">RADIO</span></button>
     <p className="title-login">The Lounge</p>
     <button className="login-button">
       <a className="login-link" href={AUTH_URL}>Login with Spotify</a>
