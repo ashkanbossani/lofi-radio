@@ -26,6 +26,7 @@ const Dashboard = ({ code }) => {
     setLyrics("")
   }
 
+  //using  axios to make a GET request to the lyrics-finder API. The API returns the lyrics for a given track and artist
   useEffect(() => {
     if (!playingTrack) return
     ;(() => {
@@ -42,11 +43,13 @@ const Dashboard = ({ code }) => {
     })()
   }, [playingTrack])
 
+  //This code is setting the access token for the Spotify API. This will allow the application to make authorized requests to the Spotify API.
   useEffect(() => {
     if (!accessToken) return
     spotifyApi.setAccessToken(accessToken)
   }, [accessToken])
 
+  //This code is making a GET request to the Spotify API to search for tracks. The search parameter is set to the value of the search state.
   useEffect(() => {
     if (!search) return setSearchResults([])
     if (!accessToken) return

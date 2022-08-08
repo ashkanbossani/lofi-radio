@@ -8,6 +8,10 @@ const useAuth = code => {
 
   const REACT_APP_BASE_URL = "http://localhost:5050"
 
+
+  // making a POST request to the `/login` endpoint. This request includes the code that was passed in through the query string.
+  //If the request is successful, it will set the access token, refresh token, and expires in time in state.
+  //If the request is not successful, it will redirect the user to the home page.
   useEffect(() => {
     (async () => {
       try {
@@ -20,11 +24,12 @@ const useAuth = code => {
         setRefreshToken(refresh_token)
         setExpiresIn(expires_in)
       } catch {
-        window.location = "/"
+        window.location = "/music"
       }
     })()
   }, [code])
 
+//This code is setting up a recurring interval that will make a POST request to the /refresh endpoint every time the access token expires. If the request is successful, it will update the access token and expiration time. If the request fails, the user will be redirected to the home page.
   useEffect(() => {
     if (!refreshToken || !expiresIn) return
     const interval = setInterval(async () => {
