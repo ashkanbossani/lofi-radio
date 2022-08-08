@@ -28,16 +28,17 @@ const Dashboard = ({ code }) => {
 
   useEffect(() => {
     if (!playingTrack) return
-    ;(async () => {
-      const {
-        data: { lyrics },
-      } = await axios.get(`${REACT_APP_BASE_URL}/lyrics`, {
-        params: {
-          track: playingTrack.title,
-          artist: playingTrack.artist,
-        },
-      })
-      setLyrics(lyrics)
+    ;(() => {
+      axios
+        .get(`${REACT_APP_BASE_URL}/lyrics`, {
+          params: {
+            track: playingTrack.title,
+            artist: playingTrack.artist,
+          },
+        })
+        .then(({ data }) => {
+          setLyrics(data.lyrics)
+        })
     })()
   }, [playingTrack])
 
