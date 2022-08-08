@@ -294,7 +294,7 @@ const RadioPage = () => {
       </Draggable>
       <div className="chilllounge-btn">
         <Link style={{textDecoration: 'none'}} to="/chill">
-        <button class="button-62"><span class="text">LOUNGE</span></button>
+        <button class="button-85">LOUNGE</button>
         </Link>
       </div>
     
