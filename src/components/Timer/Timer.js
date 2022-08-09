@@ -29,7 +29,7 @@ const Timer = () => {
     setSecondsLeft(secondsLeftRef.current);
   }
 
-  // This code is using the useEffect hook to set up an interval that will call the tick function every second. It is also using the modeRef and secondsLeftRef to keep track of the mode and seconds left.
+  // This code is using the useEffect hook to set up an interval that will call the tick function every second using modeRef and secondsLeftRef to keep track of the mode and seconds left.
 
   useEffect(() => {
     function switchMode() {

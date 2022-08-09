@@ -70,7 +70,7 @@ const AudioControls = ({
           />
         </div>
         <ReactPlayer
-          className="liveStreamPlayer"
+          className="live-stream-player"
           playing={Live}
           volume={volume}
           url={LiveStreamAudio}

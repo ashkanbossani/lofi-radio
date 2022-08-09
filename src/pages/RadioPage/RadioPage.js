@@ -9,7 +9,6 @@ import Timer from "../../components/Timer/Timer";
 import SettingsScreen from "../../components/SettingsScreen/SettingsScreen";
 import SettingsContext from "../../components/SettingsContext/SettingsContext";
 import Draggable from "react-draggable";
-import TodoList from "../../components/TodoList/TodoList";
 import { Link  } from "react-router-dom";
 import { Helmet } from "react-helmet";
 const RadioPage = () => {
@@ -285,11 +284,6 @@ const RadioPage = () => {
         </div>
       </Draggable>
 
-      <Draggable>
-        <div className="todo">
-          <TodoList/>
-        </div>
-      </Draggable>
       <div className="chilllounge-btn">
         <Link style={{textDecoration: 'none'}} to="/chill">
         <button class="button-85">LOUNGE</button>
