@@ -20,7 +20,7 @@ const RadioStations = ({
   return (
     <>
       <div className="radio-list">
-        <h1 className="radio-title">Synth Wave</h1>
+        <h1 className="radio-list__title">Synth Wave</h1>
         <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0 }}>
         <motion.div
           whileHover={{ scale: 1.25 }}
@@ -57,7 +57,7 @@ const RadioStations = ({
         </motion.div>
       </motion.div>
     
-    <h1 className="radio-title">Hip-Hop</h1>
+    <h1 className="radio-list__title">Hip-Hop</h1>
       <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.35 }}>
         <motion.div
           whileHover={{ scale: 1.25 }}
@@ -94,7 +94,7 @@ const RadioStations = ({
         </motion.div>
       </motion.div>
 
-      <h1 className="radio-title">Jazz</h1>
+      <h1 className="radio-list__title">Jazz</h1>
 
       <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.75 }}>
         <motion.div
@@ -132,7 +132,7 @@ const RadioStations = ({
         </motion.div>
       </motion.div>
 
-      <h1 className="radio-title">Dance</h1>
+      <h1 className="radio-list__title">Dance</h1>
       
       <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.85 }}>
         <motion.div

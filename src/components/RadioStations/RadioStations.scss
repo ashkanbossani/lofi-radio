@@ -7,6 +7,14 @@
     align-items:flex-start;
     margin-right: 3px;
     z-index: 1;
+
+    &__title{
+      font-size: 34px;
+      font-family: 'Marmalade';
+      font-weight: 700;
+      margin-top:1.5rem;
+      color:pink;
+    }
   }
 
   .station{
@@ -18,17 +26,9 @@
     margin-top: 20px;
     text-shadow: 1px 1px rgb(0 0 0 / 70%);
     cursor: pointer;
+
+    &:hover{
+      color: white
+    }
   }
 
-  .station:hover{
-  color: white
-}
-
-  .radio-title{
-    font-size: 34px;
-    font-family: 'Marmalade';
-    font-weight: 700;
-    margin-top:1.5rem;
-    color:pink;
-}
-  
