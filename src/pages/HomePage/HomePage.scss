@@ -1,0 +1,307 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  
+  .video-container{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+  }
+  
+  .hero-container{
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    top: -25%;
+    left: -40%;
+    overflow: hidden;
+    z-index: -100;
+
+    &__overlay{
+      position:fixed;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      background-color:black;
+      opacity:0.2;
+      z-index:1001;
+    }
+  }
+
+
+
+  .title-container{
+    &__title{
+    animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)2s both;
+    z-index: 2;
+    position: relative;
+    left: 65%;
+    bottom: -200px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 8rem;
+    transform: scale(1, 0.9);
+    color: #fff;
+    }
+
+    &__subtitle{
+      z-index: 2;
+      position: relative;
+      left: 65.7%;
+      bottom: -215px;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 2rem;
+      transform: scale(1, 0.9);
+      margin: 0;
+      text-shadow:
+          0 0 4px #fff,
+          0 0 11px #fff,
+          0 0 19px #fff,
+          0 0 40px #fff,
+          0 0 80px #fff,
+          0 0 90px #fff,
+          0 0 100px #fff,
+          0 0 150px #fff;
+      animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3.2s both;
+    }
+  }
+  
+  @keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
+  // neon styling
+h1.title-container__title{
+  font-size: 8rem;
+  animation: flicker 1.5s infinite alternate,tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)2s both ;   
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #FF10F0,
+      0 0 80px #FF10F0,
+      0 0 90px #FF10F0,
+      0 0 100px #FF10F0,
+      0 0 150px #FF10F0;
+  
+  }
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+//flicker animations
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.welcome-button {
+  width: 400px;
+  height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: none;  /* fallback for old browsers */
+  border: 1px solid white;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(224, 224, 224, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  left: 120%;
+  top:19rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000)4.6s both;
+
+    &::before{
+      content: '';
+      border-radius: 1000px;
+      min-width: calc(400px + 12px);
+      min-height: calc(60px + 12px);
+      border: 6px solid #ffffff;
+      box-shadow: 0 0 60px rgba(255, 255, 255, 0.64);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all .3s ease-in-out 0s;
+      z-index: -2;
+    }
+
+    &:hover, &:focus{
+      color: #ffffff;
+      transform: translateY(-6px);
+    }
+
+    &:hover::before, &:focus::before{
+      opacity: 1;
+    }
+
+    &::after{
+      content: '';
+      width: 400px; height: 30px;
+      border-radius: 100%;
+      border: 6px solid #dfdfdf;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 2.5s infinite;
+    }
+
+    &:hover::after, &:focus::after{
+      cursor:none;
+      pointer-events: none;
+    }
+  }
+
+    
+    @keyframes ring {
+      0% {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+      }
+      100% {
+        width:200px;
+        height: 200px;
+        opacity: 0;
+      }
+    }
+    
+    @-webkit-keyframes fade-in-fwd {
+      0% {
+                transform: translateZ(-80px);
+        opacity: 0;
+      }
+      100% {
+                transform: translateZ(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in-fwd {
+      0% {
+      
+                transform: translateZ(-80px);
+        opacity: 0;
+      }
+      100% {
+        
+                transform: translateZ(0);
+        opacity: 1;
+      }
+    }
+
+     
+  .note-position-1 {
+    top: 250px;
+    left: 1450px;
+    color: white;
+    font-size:3rem;
+  }
+  
+  .note-position-2 {
+    top: 220px;
+    left: 1500px;
+    color: white;
+    font-size:3rem;
+  }
+  
+  .note-position-3 {
+    top: 240px;
+    left:1350px;
+    color: white;
+    font-size:3rem;
+  }
+  
+  .note-amination {
+    position: absolute;
+    font-size: 35px;
+    animation-delay: 4s;
+    animation-name: notes;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0;
+  }
+  
+  @keyframes notes {
+    0% {
+      font-size: 15px;
+      opacity: 0; 
+    }
+    50% {
+      opacity: 1; 
+    }
+    100% {
+      font-size: 60px;
+      margin-top: -150px;
+      opacity: 0; 
+    }
+  }
+  
+
+  

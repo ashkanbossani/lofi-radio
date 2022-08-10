@@ -1,0 +1,87 @@
+/* CSS */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 17px;
+  justify-content: center;
+  line-height: 0.5em;
+  max-width: 80px;
+  min-width: 100px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+
+  &:hover {
+    background: none;
+  }
+}
+
+.dashboard-container {
+  padding: 2rem;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+
+  &::placeholder {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+.results-container {
+  flex-grow: 1;
+  margin: 3rem 0;
+  overflow-y: auto;
+  overflow-x: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.lyrics-container {
+  height: 65vh;
+  text-align: center;
+  color: #fff;
+  white-space: pre;
+  font-family: "Montserrat", sans-serif;
+}
+
+.player-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-family: "Montserrat", sans-serif;
+}

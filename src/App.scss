@@ -1,1 +1,8 @@
-@use "../styles/partials/global" as *;
+@use "./styles/partials/global" as *;
+
+html,
+body,
+#app,
+#app > div {
+  height: 100%;
+}

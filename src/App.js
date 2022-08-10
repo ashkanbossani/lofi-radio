@@ -1,16 +1,19 @@
-import React from "react";
 import "./App.scss";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import axios from "axios";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import RadioPage from "./pages/RadioPage/RadioPage";
+import ChillPage from "./pages/ChillPage/ChillPage";
+
 
 function App() {
   return (
-    <>
-    <div>
-    <h1>Hello world!</h1>
-    <p>Hello everyone</p>
-    </div>
-    </>
+   <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route path="/music" component={RadioPage} />
+      <Route path="/chill" component={ChillPage} />
+    </Switch>
+   </BrowserRouter>
   );
 }
 
