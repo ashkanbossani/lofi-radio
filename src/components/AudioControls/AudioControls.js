@@ -15,9 +15,15 @@ const AudioControls = ({
   playPauseImg,
 }) => {
 
-// Checking the classNameVol variable. If it is equal to "volumeOn" or "audioOnImg", the volume is set to 0. If it is equal to "volumeOff" or "audioOffImg", the volume is set back to the last played volume.
+  const [muteCheck, setUnmute] = useState("volumeOn"); //unmute/mute change
+  const [muteCheck2, setUnmute2] = useState("audioOnImg");
+  const [volumeImg, setVolumeImg] = useState(volumeOn);
+  const [volume, setVolume] = useState(0.35);
+
+  // Checking the classNameVol variable. If it is equal to "volumeOn" or "audioOnImg", the volume is set to 0. If it is equal to "volumeOff" or "audioOffImg", the volume is set back to the last played volume.
   const handleMute = (e) => {
     let classNameVol = e.target.className;
+    
     if (classNameVol === "volumeOn" || classNameVol === "audioOnImg") {
       setVolumeImg(mute);
       setUnmute("volumeOff");
@@ -31,11 +37,6 @@ const AudioControls = ({
       setVolume(lastPlayedVolume);
     }
   };
-
-  const [muteCheck, setUnmute] = useState("volumeOn"); //unmute/mute change
-  const [muteCheck2, setUnmute2] = useState("audioOnImg");
-  const [volumeImg, setVolumeImg] = useState(volumeOn);
-  const [volume, setVolume] = useState(0.35);
 
   return (
     <div>

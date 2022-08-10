@@ -16,7 +16,7 @@ const Login = () => {
     </Link>
     <p className="title-login">The Lounge</p>
     <button className="login-button">
-      <a className="login-link" href={AUTH_URL}>Login with Spotify</a>
+      <a className="login-button__link" href={AUTH_URL}>Login with Spotify</a>
     </button>
     </>
   )

@@ -58,10 +58,10 @@
   .volume-dial::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
-    width: 15px; /* Set a specific slider handle width */
-    height: 15px; /* Slider handle height */
-    background: #c7c7c7; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 15px; 
+    height: 15px; 
+    background: #c7c7c7; 
+    cursor: pointer;
     border-radius: 50%;
   }
   
