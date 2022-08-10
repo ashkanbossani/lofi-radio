@@ -1,34 +1,33 @@
 @use "../../styles/partials/global" as *;
 
-.radio-list{
-    min-width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    margin-right: 3px;
-    z-index: 1;
+.radio-list {
+  min-width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 3px;
+  z-index: 1;
 
-    &__title{
-      font-size: 34px;
-      font-family: 'Marmalade';
-      font-weight: 700;
-      margin-top:1.5rem;
-      color:pink;
-    }
+  &__title {
+    font-size: 34px;
+    font-family: "Marmalade";
+    font-weight: 700;
+    margin-top: 1.5rem;
+    color: pink;
   }
+}
 
-  .station{
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    color: gainsboro;
-    text-transform: uppercase;
-    margin-top: 20px;
-    text-shadow: 1px 1px rgb(0 0 0 / 70%);
-    cursor: pointer;
+.station {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: gainsboro;
+  text-transform: uppercase;
+  margin-top: 20px;
+  text-shadow: 1px 1px rgb(0 0 0 / 70%);
+  cursor: pointer;
 
-    &:hover{
-      color: white
-    }
+  &:hover {
+    color: white;
   }
-
+}

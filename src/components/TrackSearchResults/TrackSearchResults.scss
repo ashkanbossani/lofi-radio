@@ -1,23 +1,23 @@
-.result-container{
-display: flex;
+.result-container {
+  display: flex;
   align-items: center;
   margin: 2rem;
   cursor: pointer;
 
-  &__image{
+  &__image {
     height: 64px;
     width: 64px;
   }
 }
 
-.song-container{
-    margin-left: 3rem;
- 
-    &__title{
-        color: #fff;
-    }
+.song-container {
+  margin-left: 3rem;
 
-    &__artist{
-        color: #f5f5f5;
-    }
+  &__title {
+    color: #fff;
+  }
+
+  &__artist {
+    color: #f5f5f5;
+  }
 }

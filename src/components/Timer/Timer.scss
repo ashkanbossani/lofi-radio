@@ -1,27 +1,29 @@
-.timer-button--play{
-    background-color: transparent;
-    filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(100%) contrast(86%);
-    border:0;
-    width:20px;
-    position:absolute;
-    right:5.8rem;
-    bottom:3.5rem;
-    cursor: pointer;
+.timer-button--play {
+  background-color: transparent;
+  filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(100%)
+    contrast(86%);
+  border: 0;
+  width: 20px;
+  position: absolute;
+  right: 5.8rem;
+  bottom: 3.5rem;
+  cursor: pointer;
 }
 
-.timer-button--pause{
-    background-color: transparent;
-    filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%) contrast(86%);
-    border:0;
-    width:20px;
-    position:absolute;
-    right:5.8rem;
-    bottom:3.5rem;
-    cursor: pointer;
+.timer-button--pause {
+  background-color: transparent;
+  filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%)
+    contrast(86%);
+  border: 0;
+  width: 20px;
+  position: absolute;
+  right: 5.8rem;
+  bottom: 3.5rem;
+  cursor: pointer;
 }
 
-.pomodoro-timer{
-    width:180px;
-    height:180px;
-    font-family: "Montserrat", sans-serif;
+.pomodoro-timer {
+  width: 180px;
+  height: 180px;
+  font-family: "Montserrat", sans-serif;
 }

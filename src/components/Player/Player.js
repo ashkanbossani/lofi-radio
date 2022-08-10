@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 
-import SpotifyPlayer from "react-spotify-web-playback"
+import SpotifyPlayer from "react-spotify-web-playback";
 
 const Player = ({ accessToken, trackUri }) => {
-  const [play, setPlay] = useState(false)
+  const [play, setPlay] = useState(false);
 
   useEffect(() => {
-    setPlay(true)
-  }, [trackUri])
+    setPlay(true);
+  }, [trackUri]);
 
-  if (!accessToken) return null
+  if (!accessToken) return null;
   return (
     <SpotifyPlayer
       token={accessToken}
       showSaveIcon
-      callback={state => !state.isPlaying && setPlay(false)}
+      callback={(state) => !state.isPlaying && setPlay(false)}
       play={play}
       uris={trackUri ? trackUri : []}
       styles={{
@@ -28,7 +28,7 @@ const Player = ({ accessToken, trackUri }) => {
         height: "90px",
       }}
     />
-  )
-}
+  );
+};
 
-export default Player
+export default Player;

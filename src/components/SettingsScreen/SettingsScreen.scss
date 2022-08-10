@@ -1,49 +1,47 @@
-.settings-container{
-    color:white;
-    font-family: "Montserrat", sans-serif;
+.settings-container {
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
-label{
-    display:block;
-    margin-bottom:0.5rem;
-    margin-top:1rem;
-    text-transform:capitalize
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
 }
 
-.slider{
-    height:25px;
-    width:150px;
-    border: 2px solid #f54e4e;
-    border-radius:20px;
+.slider {
+  height: 25px;
+  width: 150px;
+  border: 2px solid #f54e4e;
+  border-radius: 20px;
 
-    &--green{
-        height:25px;
-        border:2px solid #4aec8c;
-        border-radius:20px;
-    }
+  &--green {
+    height: 25px;
+    border: 2px solid #4aec8c;
+    border-radius: 20px;
+  }
 }
 
-.thumb{
-    background-color: #f54e4e;
-    cursor:pointer;
-    width:20px;
-    height:20px;
-    border-radius:20px;
+.thumb {
+  background-color: #f54e4e;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
 
-    &--green{
+  &--green {
     background-color: #4aec8c;
-    cursor:pointer;
-    width:20px;
-    height:20px;
-    border-radius:20px;
-    }
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+  }
 }
 
-.back-button{
-    margin-top:1rem;
-    text-align: center;
+.back-button {
+  margin-top: 1rem;
+  text-align: center;
 }
-
-
 
 //green: #4aec8c
