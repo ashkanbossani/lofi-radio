@@ -19,20 +19,23 @@ html,body{
     left: -40%;
     overflow: hidden;
     z-index: -100;
+
+    &__overlay{
+      position:fixed;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      background-color:black;
+      opacity:0.2;
+      z-index:1001;
+    }
   }
 
-  .overlay{
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color:black;
-    opacity:0.2;
-    z-index:1001;
-  }
 
-  .title{
+
+  .title-container{
+    &__title{
     animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)2s both;
     z-index: 2;
     position: relative;
@@ -46,6 +49,32 @@ html,body{
     font-size: 8rem;
     transform: scale(1, 0.9);
     color: #fff;
+    }
+
+    &__subtitle{
+      z-index: 2;
+      position: relative;
+      left: 65.7%;
+      bottom: -215px;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 2rem;
+      transform: scale(1, 0.9);
+      margin: 0;
+      text-shadow:
+          0 0 4px #fff,
+          0 0 11px #fff,
+          0 0 19px #fff,
+          0 0 40px #fff,
+          0 0 80px #fff,
+          0 0 90px #fff,
+          0 0 100px #fff,
+          0 0 150px #fff;
+      animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3.2s both;
+    }
   }
   
   @keyframes tracking-in-expand-fwd {
@@ -64,7 +93,7 @@ html,body{
   }
   
   // neon styling
-h1.title{
+h1.title-container__title{
   font-size: 8rem;
   animation: flicker 1.5s infinite alternate,tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)2s both ;   
 }
@@ -85,34 +114,6 @@ h1.title{
   20%, 24%, 55% {        
       text-shadow: none;
   }    
-}
-
-.subtitle{
-  z-index: 2;
-  position: relative;
-    left: 65.7%;
-    bottom: -215px;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 2rem;
-  transform: scale(1, 0.9);
-  margin: 0;
-  text-shadow:
-      0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px #fff,
-      0 0 40px #fff,
-      0 0 80px #fff,
-      0 0 90px #fff,
-      0 0 100px #fff,
-      0 0 150px #fff;
-}
-
-.subtitle{
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3.2s both;
 }
 
 //flicker animations
@@ -171,10 +172,10 @@ h1.title{
   top:19rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
-  }
+  animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000)4.6s both;
 
-  .welcome-button::before {
-    content: '';
+    &::before{
+      content: '';
       border-radius: 1000px;
       min-width: calc(400px + 12px);
       min-height: calc(60px + 12px);
@@ -188,17 +189,17 @@ h1.title{
       transition: all .3s ease-in-out 0s;
       z-index: -2;
     }
-    
-    .welcome-button:hover, .welcome-button:focus {
+
+    &:hover, &:focus{
       color: #ffffff;
       transform: translateY(-6px);
     }
-    
-    .welcome-button:hover::before, button:focus::before {
+
+    &:hover::before, &:focus::before{
       opacity: 1;
     }
-    
-    .welcome-button::after {
+
+    &::after{
       content: '';
       width: 400px; height: 30px;
       border-radius: 100%;
@@ -210,11 +211,13 @@ h1.title{
       transform: translate(-50%, -50%);
       animation: ring 2.5s infinite;
     }
-    
-    .welcome-button:hover::after, .welcome-button:focus::after {
+
+    &:hover::after, &:focus::after{
       cursor:none;
       pointer-events: none;
     }
+  }
+
     
     @keyframes ring {
       0% {
@@ -227,10 +230,6 @@ h1.title{
         height: 200px;
         opacity: 0;
       }
-    }
-    
-    .welcome-button {
-                animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000)4.6s both;
     }
     
     @-webkit-keyframes fade-in-fwd {
