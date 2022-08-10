@@ -2,8 +2,11 @@ import React from "react";
 import "./Login.scss";
 import { Link } from "react-router-dom";
 
-const REACT_APP_CLIENT_ID = "4e54f2e7db4241989b2cb1afd294535d";
-const REACT_APP_REDIRECT_URI = "http://localhost:3000/chill";
+const reactClientId = process.env.REACT_APP_CLIENT_ID;
+const redirectUri = process.env.REACT_APP_REDIRECT_URI;
+
+const REACT_APP_CLIENT_ID = reactClientId;
+const REACT_APP_REDIRECT_URI = redirectUri;
 
 const Login = () => {
   //auth url gives access to the user's profile and gives them a token

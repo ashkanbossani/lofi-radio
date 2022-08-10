@@ -7,11 +7,14 @@ import SpotifyWebApi from "spotify-web-api-node";
 import axios from "axios";
 import "./Dashboard.scss";
 
+const serverUrl = process.env.REACT_APP_SERVER_URL;
+const reactClientId = process.env.REACT_APP_CLIENT_ID;
+
 const spotifyApi = new SpotifyWebApi({
-  clientId: "4e54f2e7db4241989b2cb1afd294535d",
+  clientId: reactClientId,
 });
 
-const REACT_APP_BASE_URL = "http://localhost:5050";
+const REACT_APP_BASE_URL = serverUrl;
 
 const Dashboard = ({ code }) => {
   const accessToken = useAuth(code);
