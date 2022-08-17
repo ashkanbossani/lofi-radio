@@ -41,12 +41,12 @@ html,body{
     position: relative;
     left: 65%;
     bottom: -200px;
-    width: 100%;
+    // width: 100%;
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 7px;
-    font-size: 8rem;
+    font-size: 4rem;
     transform: scale(1, 0.9);
     color: #fff;
     }
@@ -151,7 +151,7 @@ h1.title-container__title{
 }
 
 .welcome-button {
-  width: 400px;
+  width: 350px;
   height: 50px;
   font-family: 'Montserrat', sans-serif;
   font-size: 22px;
@@ -168,7 +168,7 @@ h1.title-container__title{
   outline: none;
   position: relative;
   padding: 10px;
-  left: 120%;
+  left: 110%;
   top:19rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
@@ -177,7 +177,7 @@ h1.title-container__title{
     &::before{
       content: '';
       border-radius: 1000px;
-      min-width: calc(400px + 12px);
+      min-width: calc(350px + 12px);
       min-height: calc(60px + 12px);
       border: 6px solid #ffffff;
       box-shadow: 0 0 60px rgba(255, 255, 255, 0.64);
@@ -258,14 +258,14 @@ h1.title-container__title{
      
   .note-position-1 {
     top: 250px;
-    left: 1450px;
+    left: 1150px;
     color: white;
     font-size:3rem;
   }
   
   .note-position-2 {
     top: 220px;
-    left: 1500px;
+    left: 1200px;
     color: white;
     font-size:3rem;
   }
