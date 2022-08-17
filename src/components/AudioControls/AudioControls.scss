@@ -1,8 +1,8 @@
 .audio-control {
-  width: 99%;
+  width: 90%;
   height: 10vh;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   position: absolute;
   top: 80%;
   color: white;
@@ -16,8 +16,8 @@
 
 .audioOnImg,
 .audioOffImg {
-  min-width: 30px;
-  height: 30px;
+  min-width: 28px;
+  height: 28px;
   margin-left: -1px;
   filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%)
     contrast(86%);
@@ -89,16 +89,16 @@
 }
 
 .playBtn {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   margin-left: 2px;
   filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%)
     contrast(86%);
 }
 
 .playBtn2 {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   margin-left: 0px;
   filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(97%)
     contrast(86%);
@@ -107,10 +107,10 @@
 .play-pause,
 .play-pause2 {
   border: #c7c7c7 1px solid;
-  height: 80px;
-  min-width: 80px;
+  height: 76px;
+  min-width: 78px;
   border-radius: 50%;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
