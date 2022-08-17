@@ -124,7 +124,7 @@ body {
   right: 0rem;
   bottom: 6rem;
   right: 2rem;
-  padding: 0.6em 2em;
+  padding: 0.4em 1.5em;
   border: none;
   outline: none;
   color: gainsboro;
@@ -135,7 +135,7 @@ body {
     rgba(155, 0, 250, 1) 100%
   );
   cursor: pointer;
-  z-index: 0;
+  z-index: 1;
   border-radius: 10px;
   user-select: none;
   -webkit-user-select: none;
