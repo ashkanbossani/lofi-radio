@@ -11,6 +11,7 @@ Maybe you can mention me or this repo in the acknowledgements too
 
 
   <h1>LO-FI RADIO</h1>
+  <p>A Radio app featuring lo-fi radio stations that play while showing animations. A hidden button that takes you to a login page using spotify credentials that will alow you to use a spotify web player. Made using React, Node.js, and Express.</p>
     
 </div>
 
@@ -139,7 +140,9 @@ Start the client
 
 Ashkan Bossani  - abossani@hotmail.com
 
-Project Link: [https://github.com/ashkanbossani/lofi-radio
+Project Link: https://github.com/ashkanbossani/lofi-radio
+
+Demo: https://lofi-vibes-radio.netlify.app/
 
 
 <!-- Acknowledgments -->
